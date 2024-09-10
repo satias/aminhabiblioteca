@@ -1,0 +1,65 @@
+@use 'variaveis'
+.switch
+    position: relative
+    display: inline-block
+    width: 90px
+    height: 40px
+    & input
+        opacity: 0
+        width: 0
+        height: 0
+    &.switch-pequeno
+        width: 60px
+        height: 30px
+.slider
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: variaveis.$primary
+    -webkit-transition: .4s
+    transition: .4s
+    border-radius: 10px
+    &.slider-pequeno
+        border-radius: 20px !important
+        opacity: 0.6
+        &:before
+            height: 24px
+            width: 24px
+            left: 3px
+            bottom: 3px
+            border-radius: 20px !important
+        input:checked +&
+            opacity: 1 !important
+        input:checked +&::before
+            -webkit-transform: translateX(30px) !important
+            -ms-transform: translateX(30px) !important
+            transform: translateX(30px) !important
+    &:before
+        position: absolute
+        content: ""
+        height: 28px
+        width: 28px
+        left: 6px
+        bottom: 6px
+        background-color: variaveis.$background
+        -webkit-transition: .4s
+        transition: .4s
+        z-index: 3
+        border-radius: 10px
+    input:checked + &
+            background-color: variaveis.$primary
+    input:checked + &::before
+        -webkit-transform: translateX(50px)
+        -ms-transform: translateX(50px)
+        transform: translateX(50px)
+.pt-text
+    position: absolute
+    top: 20%
+    left: 15%
+.eng-text
+    position: absolute
+    top: 20%
+    right: 9%

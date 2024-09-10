@@ -1,0 +1,682 @@
+@use 'variaveis'
+body
+    background-color: variaveis.$background
+.pagina
+    width: 100%
+    height: 100vh
+    padding: 0.5%
+.material-symbols-rounded
+    font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24
+    &.no-fill
+        font-variation-settings: 'FILL' 0 !important
+.material-symbols-outlined
+    font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24
+    &.no-fill
+        font-variation-settings: 'FILL' 0 !important
+.sidebar
+    padding: 0.3%
+    width: 15%
+    background-color: rgba(variaveis.$primary, 0.03)
+    border-radius: 20px
+    box-shadow: 0px 4px 10px 0px rgba(variaveis.$primary,0.25)
+    overflow: hidden
+.min-h-100
+    height: 100% !important
+.sidebarlogo
+    width: 210px
+    height: auto
+    object-fit: cover
+.sidebarlinha
+    height: 2px
+    background-image: linear-gradient(0.25turn, transparent, rgba(variaveis.$accent, 1), transparent)
+.btn-icon
+    padding: 0px
+    margin: 0px
+    border: 0px
+.icon-35
+    width: 35px
+    height: 35px
+    font-size: 35px
+.icon-40
+    width: 40px
+    height: 40px
+    font-size: 40px
+.icon-30
+    width: 30px
+    height: 30px
+    font-size: 30px
+.icon-25
+    width: 25px
+    height: 25px
+    font-size: 25px
+.icon-20
+    width: 20px
+    height: 20px
+    font-size: 20px
+.font-pop
+    font-family: "Poppins", sans-serif !important
+    .nav-link
+        font-size: 14px
+        color: variaveis.$text
+        opacity: 60%
+        display: flex
+        transition: color 0.4s ease,opacity 0.4s ease
+        &.setCookieBtn
+            flex-direction: column
+            align-items: center
+            font-size: 15px !important
+        .sidebaricon
+            color: variaveis.$accent
+        &.active
+            opacity: 100% !important
+            .span-links
+                font-size: 16px !important
+            .span-lang
+                font-size: 15px !important
+            .sidebaricon
+                color: variaveis.$text
+            .bordinhaazul
+                img
+                    width: 6px !important
+            .bordinhaazulhorizontal
+                img
+                    height: 6px !important
+            .bordinhabrancahorizontal
+                img
+                    height: 6px !important
+        &:hover
+            opacity: 100%
+            .sidebaricon
+                color: variaveis.$text
+            .bordinhaazul
+                img
+                    width: 6px !important
+            .bordinhaazulhorizontal
+                img
+                    height: 6px !important
+            .bordinhabrancahorizontal
+                img
+                    height: 6px !important
+        .nav-links-label
+            padding: 15px 20px
+            display: flex
+            align-items: center
+        &.log-reg-color
+            color: variaveis.$background
+    .pages-span-text
+        color: variaveis.$text
+        font: 14px
+        text-transform: capitalize
+    .pages-span-button
+        border: 0px
+        padding: 0px
+        margin: 0px
+        width: 18px
+        height: 18px
+        span
+            font-size: 18px
+            color: variaveis.$text
+.bordinhaazul
+    img
+        width: 0px
+        transition: width 0.4s ease
+        height: 50px
+.bordinhaazulhorizontal
+    width: 50px
+    height: 6px
+    img
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 50px
+        transition: height 0.4s ease
+        height: 0px
+        transform-origin: bottom !important
+.bordinhabrancahorizontal
+    width: 50px
+    height: 6px
+    img
+        position: absolute
+        top: 0
+        right: 0
+        width: 50px
+        transition: height 0.4s ease
+        height: 0px
+        transform-origin: top !important
+.icon-acc
+    color: variaveis.$accent
+.sidebar-modal
+    transition: max-height 0.4s ease, position 0.4s ease
+    max-height: 0
+    overflow: hidden
+.sidebar-modal-open
+    max-height: 380px
+    transition: max-height 0.4s ease, position 0.4s ease
+.iconhidden
+    display: none
+.iconvisible
+    display: inline-block
+.color-unset
+    color: unset
+//--------
+.identificacao
+    height: 5%
+    .ident-img-caixa
+        position: relative
+        overflow: hidden
+        width: 47px
+        background-color: variaveis.$secondary
+        img
+            width: auto
+            height: 100%
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+    .noti-btn
+        border: 0
+        color: variaveis.$accent
+        background-color: rgba(variaveis.$secondary,0.2)
+        margin: 0
+        padding: 5px
+    .notif-tab
+        top: 105%
+        right: -100%
+        background-color: variaveis.$background
+        width: 35vh
+        height: 40vh
+        overflow-y: auto
+        z-index: 1
+    .identificacao-texto
+        font-weight: 300
+        a
+            text-decoration: none
+.w-85
+    width: 85% !important
+.w-35
+    width: 35% !important
+.w-30
+    width: 30% !important
+.w-40
+    width: 40% !important
+.w-20
+    width: 20% !important
+.w-65
+    width: 65% !important
+.h-95
+    height: 95% !important
+.h-40
+    height: 40% !important
+.h-45
+    height: 45% !important
+.h-30
+    height: 30% !important
+.h-85
+    height: 85% !important
+.h-80
+    height: 80% !important
+.h-15
+    height: 15% !important
+.h-10
+    height: 10% !important
+.col-item
+    height: 100%
+    border-radius: 20px
+    overflow: hidden
+    &.username-box
+        background-image: url("../img/livro.jpg")
+        background-repeat: no-repeat
+        background-position: 100% 35%
+        background-size: 200%
+.poppins-font
+    font-family: "Poppins", sans-serif !important
+.roboto-font
+    font-family: "Roboto", sans-serif !important
+.titulo-grande-font
+    font-family: "Poppins", sans-serif !important
+    font-size: 32px !important
+    font-weight: bold !important
+.titulo-font
+    font-family: "Poppins", sans-serif !important
+    font-size: 24px !important
+    font-weight: bold !important
+.subtitulo-font
+    font-family: "Poppins", sans-serif !important
+    font-size: 20px !important
+    font-weight: 400 !important
+.texto-font
+    font-family: "Roboto", sans-serif !important
+    font-size: 16px !important
+    font-weight: 300 !important
+.texto-pequeno-font
+    font-family: "Roboto", sans-serif !important
+    font-size: 12px !important
+    font-weight: 400 !important
+.texto-grande-font
+    font-family: "Poppins", sans-serif !important
+    font-size: 32px !important
+    font-weight: 400 !important
+.font-w-500
+    font-weight: 500 !important
+.color-text
+    color: variaveis.$text !important
+.color-accent
+    color: variaveis.$accent !important
+.color-primary
+    color: variaveis.$primary !important
+.color-back
+    color: variaveis.$background !important
+.s-back-1
+    background-color: rgba(variaveis.$text, 0.03)
+.s-back-2
+    background-color: rgba(variaveis.$primary, 0.03)
+.progress-bar-dash
+    background-color: transparent
+    div
+        background-color: variaveis.$accent
+.livro-lista-img
+    border-radius: 10px
+    height: auto !important
+    width: 75% !important
+.btn-dark
+    text-decoration: none
+    color: variaveis.$background
+    background-color: variaveis.$primary
+    padding: 2px 10px
+    border-radius: 5px
+.dash-count-ret
+    background-color: rgba(variaveis.$primary , 0.15)
+    border-radius: 20px
+    color: variaveis.$primary
+.input-dark-border-icon
+    border-right: 0
+    border-color: variaveis.$primary
+    padding-right: 0px
+.input-dark-border
+    border-left: 0
+    border-color: variaveis.$primary
+    &:focus
+        border-color: variaveis.$accent
+        color: variaveis.$text
+        box-shadow: none
+.input-normal-dark-border
+    border-color: variaveis.$primary
+    &:focus
+        border-color: variaveis.$accent
+        color: variaveis.$text
+        box-shadow: none
+    &.password-campo
+        border-right: none !important
+.btn-pass-input-red
+    border-color: variaveis.$primary !important
+.srcoll-div
+    overflow-y: auto
+.filtros-dark
+    background: variaveis.$primary
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+    padding: 2px 15px
+    display: flex
+    align-items: center
+.checkbox-20
+    width: 20px
+    height: 20px
+.btn-vazio-borda-2
+    background-color: transparent
+    padding: 5px 30px
+    border: 1px solid variaveis.$primary
+    border-radius: 10px
+.btn-back-primary
+    background-color: variaveis.$primary
+    padding: 5px 30px
+    border: 0
+    border-radius: 10px
+.btn-vazio-borda-accent
+    background-color: transparent
+    padding: 5px 30px
+    border: 1px solid variaveis.$accent
+    border-radius: 10px
+.select-input
+    &::after
+        border-color: variaveis.$accent
+    label
+        &::after
+            background-color: transparent !important
+    select
+        background-color: transparent
+        width: 160px
+        border-color: variaveis.$primary
+        &:focus
+            border-color: variaveis.$accent
+            color: variaveis.$text
+            box-shadow: none
+.botao-circ-50
+    width: 50px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+.botao-circ-30
+    width: 30px
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+.btn-flip
+    border: 0
+    background: none
+    transition: all ease-in-out 0.5s
+    &.flip
+        transform: rotate(-180deg)
+.borda-red
+    border-left: 1px solid variaveis.$accent
+    height: 100%
+    opacity: 1
+    margin: 0
+.img-book-author
+    height: auto
+    width: 80%
+.book-genres-box
+    border: 1px solid variaveis.$text
+.border-20
+    border-radius: 20px
+.border-10
+    border-radius: 10px
+.cover-book
+    width: 100%
+    height: 100%
+    transition: all ease-in-out 0.5s
+    display: inline-block
+    &.book-fcover
+        position: absolute
+        top: 0
+        left: 0
+    &.book-bcover
+        position: absolute
+        top: 0
+        right: 0
+    &.cover-hidden
+        &.book-fcover
+            left: -100% !important
+        &.book-bcover
+            right: -100% !important
+.autor-livro-list
+    .autor-livro-img
+        border-radius: 10px
+        display: block
+        height: auto !important
+        width: 80% !important
+.profile-botoes
+    button
+        background-color: transparent !important
+    .profile-link-active
+        border: 1px solid variaveis.$text
+        border-bottom: 1px solid transparent
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
+    .profile-link-inactive
+        border: 1px solid transparent
+        border-bottom: 1px solid variaveis.$text
+.pesq-rapida-tab,
+.procurarconta-input-tab
+    background-color: variaveis.$background
+    max-height: 30vh
+    width: 100%
+    padding: 2%
+    overflow-y: auto
+    z-index: 1
+    table
+        width: 100%
+        border-collapse: collapse
+        tr:not(:last-child)
+            border-bottom: 1px solid variaveis.$accent
+        td
+            padding: 10px
+        img
+            width: 40px
+            height: auto
+        tr
+            cursor: pointer
+        tr:hover
+            background-color: rgba(variaveis.$secondary,0.3)
+        a
+            text-decoration: none
+            color: inherit
+            display: block
+            height: 100%
+            width: 100%
+    table, th, td
+        border-bottom: 1px solid variaveis.$accent
+    // &.tab-pesq-conta
+    //     width: 150%
+.avatar-ball
+    border: 2px solid variaveis.$primary
+.table-box
+    table
+        width: 100%
+        border-collapse: collapse
+        td
+            padding: 10px
+        img
+            width: 40px
+            height: auto
+    table, th, td
+        border-bottom: 1px solid variaveis.$accent
+        &.tabela-gerirtickets
+            border-bottom: 0px !important
+            td
+                border-bottom: 0px !important
+    .tabela-suporte
+        .coluna-200
+            width: 200px
+        .coluna-max-10
+            max-width: 10px
+        .truncate-texto
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+.table-suporte-box
+    vertical-align: middle
+    display: flex
+    table
+        width: 100%
+        border-collapse: collapse
+        td
+            padding: 10px
+    .tabela-suporte
+        .coluna-200
+            width: 200px
+        .coluna-max-10
+            max-width: 10px
+.opacidade-60
+    opacity: 60%
+button
+    &:disabled
+        opacity: 80%
+//404 page
+.background-404
+    background-image: url('..//img/404-deco.png')
+    .p-404
+        font-size: 320px
+        font-weight: 800
+    .p-mens1
+        font-size: 60px
+        font-weight: 800
+    .p-mens2
+        font-size: 16px
+        font-weight: 600
+.border-bottom-primary
+    border: 0
+    border-bottom: 1px solid variaveis.$primary
+.border-bottom-accent
+    border: 0
+    border-bottom: 1px solid variaveis.$accent
+.btn-open
+    border: 1px solid variaveis.$primary
+    border-top-left-radius: 8px
+    border-bottom-left-radius: 8px
+.btn-closed
+    border: 1px solid variaveis.$primary
+    border-left: none !important
+    border-top-right-radius: 8px
+    border-bottom-right-radius: 8px
+.mt-neg5
+    margin-top: -5px
+.mb-neg5
+    margin-bottom: -5px
+.criar-ticket-form
+    textarea
+        background-color: rgba(variaveis.$secondary , 0.4)
+        &:focus
+            background-color: rgba(variaveis.$secondary , 0.4)
+        &.altura-desc
+            min-height: 375px
+        &.titulo-desc
+            min-height: 65px
+        &.altura-respo
+            min-height: 470px
+    label
+        border-bottom: 1px solid variaveis.$primary
+.text-justify
+    text-align: justify
+.border-1-primary
+    border: 1px solid variaveis.$primary
+.border-1-text
+    border: 1px solid variaveis.$text
+.border-1-accent
+    border: 1px solid variaveis.$accent
+.seta-cima-direita
+    top: 5% !important
+    right: 5% !important
+.cursor-pointer
+    cursor: pointer
+.info-autores
+    div
+        flex: 0 0 45%
+        input,textarea,select
+            background-color: rgba(variaveis.$secondary , .4)
+            &:focus
+                border-color: variaveis.$accent
+                color: variaveis.$text
+                box-shadow: none
+                background-color: rgba(variaveis.$secondary , .4)
+            &.formato-select
+                &:focus
+                    border-color: variaveis.$accent
+                    color: variaveis.$text
+                    box-shadow: none
+                    background-color: rgba(variaveis.$secondary , .4)
+                    border-right-color: transparent
+                    + .input-group-text
+                        border-top: 1px solid variaveis.$accent
+                        border-right: 1px solid variaveis.$accent
+                        border-bottom: 1px solid variaveis.$accent
+        label
+            &::after
+                background-color: transparent !important
+        textarea
+            resize: none
+        .input-group-text
+            background-color: rgba(variaveis.$secondary , .4)
+            border-top-right-radius: 6px !important
+            border-bottom-right-radius: 6px !important
+            transition: border-color .15s ease-in-out
+            border-left: 0px
+.options-container
+    position: absolute
+    top: 105%
+    left: 0
+    width: 100%
+    border: 1px solid #ccc
+    background-color: #fff
+    max-height: 150px
+    overflow-y: auto
+    display: none
+    z-index: 1000
+    .option
+        padding: 8px
+        cursor: pointer
+        &:hover
+            background-color: #f0f0f0
+.range-slider
+    width: 100%
+    position: relative
+
+    & .track
+        position: absolute
+        top: 50%
+        left: 0
+        width: 100%
+        height: 8px
+        background: #d18b7a
+        border-radius: 5px
+        transform: translateY(-50%)
+        z-index: 1
+
+    & .fill
+        position: absolute
+        top: 50%
+        left: 0
+        height: 8px
+        background: #333
+        border-radius: 5px 0 0 5px
+        transform: translateY(-50%)
+        z-index: 2
+
+    & input[type=range]
+        -webkit-appearance: none
+        width: 100%
+        height: 8px
+        margin: 0
+        padding: 0
+        background: transparent
+        outline: none
+        z-index: 3
+        position: relative
+
+    & input[type=range]::-webkit-slider-thumb
+        -webkit-appearance: none
+        appearance: none
+        width: 20px
+        height: 20px
+        background-color: #333
+        border-radius: 50%
+        cursor: pointer
+        position: relative
+        z-index: 4
+        margin-top: 25px
+        /* Centraliza o thumb verticalmente */
+
+    & input[type=range]::-moz-range-thumb
+        width: 20px
+        height: 20px
+        background-color: #333
+        border-radius: 50%
+        cursor: pointer
+        position: relative
+        z-index: 4
+        margin-top: 25px
+        /* Centraliza o thumb verticalmente */
+
+    & input[type=range]::-ms-thumb
+        width: 20px
+        height: 20px
+        background-color: #333
+        border-radius: 50%
+        cursor: pointer
+        position: relative
+        z-index: 4
+        margin-top: 25px
+        /* Para centralizar no IE */
+
+    .range-labels
+        display: flex
+        justify-content: space-between
+        margin-top: 10px
+
+    & span
+        font-size: 14px
+        color: #324a5e
+.esconder-texto-extra
+    white-space: wrap
+    overflow: hidden
+    text-overflow: ellipsis
