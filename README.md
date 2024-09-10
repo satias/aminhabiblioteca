@@ -1,5 +1,3 @@
-O projeto A Minha Biblioteca pode ser encontrado no GitHub no seguinte link:  por link. A base de dados necessária também está disponível numa pasta separada chamada base de dados dentro do repositório.
-Passos para Instalação
 Fazer Download do Projeto:
 1.	Aceda ao repositório do GitHub e faça o download dos ficheiros.
 2.	Após o download, extraia a pasta aminhabiblioteca para a pasta htdocs do XAMPP (ou equivalente em outros softwares):
