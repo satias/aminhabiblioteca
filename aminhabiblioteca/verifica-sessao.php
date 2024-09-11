@@ -17,7 +17,7 @@ if ((isset($_COOKIE['manter_sessao']) && $_COOKIE['manter_sessao'] == 1) ||
             $user_type = $_SESSION['user_dados']['type'];
         } 
         else {
-            header('Location: ' . get_link("regist") . '');
+            header('Location: ' . get_link("logout") . '');
             exit; // Termina o script para garantir que o redirecionamento seja seguido
         }
     }
