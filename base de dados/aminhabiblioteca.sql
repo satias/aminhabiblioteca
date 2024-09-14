@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Set-2024 às 17:58
+-- Tempo de geração: 14-Set-2024 às 17:08
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
 
@@ -1716,7 +1716,7 @@ CREATE DEFINER=`root`@`localhost` EVENT `update_books_event` ON SCHEDULE EVERY 1
     UPDATE books
     SET available_req = 0,
         available = 0
-    WHERE physical_condition = 5;
+    WHERE physical_condition = 0;
 END$$
 
 CREATE DEFINER=`root`@`localhost` EVENT `delete_expired_requests` ON SCHEDULE EVERY 1 DAY STARTS '2024-08-02 19:57:04' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
