@@ -14,8 +14,9 @@ Configuração do Ficheiro de Conexão com a Base de Dados:
 Configuração de Caminhos no Projeto
 Se o projeto A Minha Biblioteca não for alojado diretamente na pasta htdocs (no caso de usar XAMPP) ou em qualquer outro diretório padrão de uma ferramenta de servidor local, será necessário ajustar alguns caminhos de diretório no código. Caso o projeto tenha sido colocado diretamente na pasta htdocs, esta etapa pode ser ignorada.
 Existem três ficheiros onde será necessário alterar o caminho para corresponder à localização do projeto no servidor.
-1.	.htaccess
-No ficheiro .htaccess, a diretiva RewriteBase deve ser ajustada para refletir o caminho correto do projeto:
+1. Mudar o nome do ficheiro "htaccess.txt" para ".htaccess"
+2.	.htaccess
+No ficheiro .htaccess, a diretiva RewriteBase deve ser ajustada para o caminho correto do projeto:
  
 •	Linha a ser alterada: RewriteBase /aminhabiblioteca/
 •	Nova linha: Ajuste o caminho para o diretório onde o projeto está instalado. Exemplo:
