@@ -1,6 +1,7 @@
 Fazer Download do Projeto:
 1.	Aceda ao repositório do GitHub e faça o download dos ficheiros.
 2.	Após o download, extraia a pasta aminhabiblioteca para a pasta htdocs do XAMPP (ou equivalente em outros softwares):
+
 Configuração da Base de Dados:
 1.	Dentro da pasta do projeto no GitHub, localize a pasta base de dados.
 2.	Importe o ficheiro SQL da base de dados para o MySQL via phpMyAdmin (ou linha de comando MySQL):
